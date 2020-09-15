@@ -1,30 +1,57 @@
 <!DOCTYPE html>
+
+<link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+
+<style>
+    html{
+        background-color: rgb(165, 190, 236);
+    }
+
+    .smaller-image {
+        width: 800px;
+        margin-left: 350px;
+        border-radius: 50px;
+        border-style: solid;
+        border-color: rgb(9, 9, 105);
+    }
+
+    h1 {
+        font-family: 'Overpass', sans-serif;
+        color: blueviolet;
+    }
+
+    .form-box{
+        background-color:cornflowerblue;
+        padding: 5px;
+    }
+</style>
 <html>
 <head>
 <title>wrow</title>
 </head>
 <body>
 <div>
-    <h1>Welcome to my twisted mind</h1>
+    <h1>Uncomfortably edited songs</h1>
     <ul><li>be worry</li></ul>
     <ol><li>dont happy</li></ol>
     <ul><li>*sad whistling*</li></ul>
 </div>
 <div>
     <p>Click <a href="https://www.youtube.com/watch?v=LbTxfN8d2CI" target="_blank">here</a> to listen</p>
-    <a href="https://www.youtube.com/watch?v=A1KXT7oghPQ"><img src="https://i.ytimg.com/vi/A1KXT7oghPQ/maxresdefault.jpg" alt="Neil Diamond on an album cover but edited so he's holding a gun">
+    <a href="https://www.youtube.com/watch?v=A1KXT7oghPQ" target="_blank"><img src="https://i.ytimg.com/vi/A1KXT7oghPQ/maxresdefault.jpg" alt="Neil Diamond on an album cover but edited so he's holding a gun" class="smaller-image">
     </a>
 </div>
 <div>
     <p>
         Was it good?
     </p>
+    <form class="form-box">
     <label for="good">
         <input id="good" value="good" type="radio" name="good-bad"> Good
     </label>
     <label for="bad">
         <input id="bad" value="bad" type="radio" name="good-bad"> Bad
-    </label>
+    </label></form>
 </div>
 </body>
 </html>
