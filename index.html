@@ -1,57 +1,140 @@
 <!DOCTYPE html>
-
-<link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+<html>
+<head>
+    <title>wrow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
 
 <style>
     html{
-        background-color: rgb(165, 190, 236);
+        background: linear-gradient(180deg,rgb(165, 190, 236), rgb(129, 218, 214));
     }
-
-    .smaller-image {
-        width: 800px;
-        margin-left: 350px;
-        border-radius: 50px;
-        border-style: solid;
-        border-color: rgb(9, 9, 105);
-    }
-
     h1 {
         font-family: 'Overpass', sans-serif;
-        color: blueviolet;
+        font-weight: 800;
+        font-size: 50px;
+        color: #3F1169;
+        text-align: center;
+        text-transform: uppercase;
     }
-
-    .form-box{
-        background-color:cornflowerblue;
-        padding: 5px;
+    h2{
+        font-family: sans-serif;
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    p{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+    }
+    a{
+        color: black;
+        font-size: 20px;
+    }
+    body{
+        padding-top: 150px;
+    }
+    nav{
+        background: #7298DF;
+        text-align: center;
+        padding: 7px 25px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-row-gap: 10px;
+        box-shadow:0 2px 25px black;
+    }
+    .modified-image{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto;
+        height: 80px;
+    }
+    .text-box{
+        width: 80%;
+        height: 100%;   
+        position: relative;
+        bottom: 500px;
+        left: 100px;
+    }
+    #circle{
+        animation-name: rainbow;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        position: relative;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin: 15px 15px;
+    }
+    @keyframes rainbow{
+        0%{
+            background-color: #eeaeca;
+            bottom: 0px;
+        }
+        25%{
+            background-color: #c78be2;
+            bottom: 10px;
+        }
+        50%{
+            background-color: #94bbe9;
+            bottom: 0px;
+        }
+        75%{
+            background-color: #c78be2;
+            bottom: 10px;
+        }
+        100%{
+            background-color: #eeaeca;
+            bottom: 0px;
+        }
+    }
+    .fixed-header, .fixed-footer{
+        position: fixed;
+        width: 100%;
+        padding: 10px, 0;
+        left: 0;
+    }
+    .fixed-header{
+        top: 0;
+        background: #8cabe6;
+    }
+    .fixed-footer{
+        bottom: 0;
     }
 </style>
-<html>
-<head>
-<title>wrow</title>
 </head>
 <body>
-<div>
-    <h1>Uncomfortably edited songs</h1>
-    <ul><li>be worry</li></ul>
-    <ol><li>dont happy</li></ol>
-    <ul><li>*sad whistling*</li></ul>
-</div>
-<div>
-    <p>Click <a href="https://www.youtube.com/watch?v=LbTxfN8d2CI" target="_blank">here</a> to listen</p>
-    <a href="https://www.youtube.com/watch?v=A1KXT7oghPQ" target="_blank"><img src="https://i.ytimg.com/vi/A1KXT7oghPQ/maxresdefault.jpg" alt="Neil Diamond on an album cover but edited so he's holding a gun" class="smaller-image">
-    </a>
-</div>
-<div>
-    <p>
-        Was it good?
-    </p>
-    <form class="form-box">
-    <label for="good">
-        <input id="good" value="good" type="radio" name="good-bad"> Good
-    </label>
-    <label for="bad">
-        <input id="bad" value="bad" type="radio" name="good-bad"> Bad
-    </label></form>
-</div>
+    <header class="fixed-header">
+        <div class="container">
+            <h1>Header</h1>
+            <nav>
+                <a href="http://127.0.0.1:5500/index.html">Home</a>
+                <a href="#">Generators</a>
+                <a href="#">Playlists</a>
+                <a href="#">Character Creators</a>
+            </nav>
+        </div>
+    </header>
+    <div">
+        <h2>save me</h2>
+        <img src="https://i.pinimg.com/originals/56/4f/72/564f7260c1c7c668290d42e87441429d.jpg"
+        alt="Image of a technical difficulties screen" class="modified-image">
+        <br>
+        <img src="https://i.kym-cdn.com/entries/icons/facebook/000/018/929/graphic_design_is_my_passion.jpg"
+        alt="Image with a badly photoshopped frog on a cloudy sky saying Graphic design is my passion" class="modified-image">
+    </div>
+    <div class="text-box">
+        <p>I don't know what I'm doing :)</p>
+    </div>
+    <footer class="fixed-footer">
+        <div id="circle"></div>
+    </footer>
 </body>
 </html>
