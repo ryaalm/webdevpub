@@ -31,7 +31,7 @@ nav{
     border-top: 5px solid #668ed9;
     box-shadow: 0 5px 5px black;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(6, auto);
     grid-gap: 100px;
 }
 nav a{
