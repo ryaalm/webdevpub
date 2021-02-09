@@ -14,9 +14,19 @@
             <a href="#" id="nav-link">Character Creators</a>
             <a href="playlists.html" id="nav-link">Playlists</a>
             <a href="#" id="nav-link">Resources</a>
-            <a href="#" id="nav-link">Contact me</a>
         </nav>
     </header>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+    Your browser does not support the canvas element.
+    </canvas>
+
+    <script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#532473";
+    ctx.fillRect(0,0,150,75);
+    </script>
+
     <main id="main">
         <h2>save me</h2>
         <img src="https://i.pinimg.com/originals/56/4f/72/564f7260c1c7c668290d42e87441429d.jpg"
