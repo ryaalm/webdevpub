@@ -1,6 +1,13 @@
 html{
     background: rgb(83,36,115);
-    background: linear-gradient(180deg,rgb(131, 58, 180) 25%, rgb(253, 29, 29) 65%, rgb(252, 176, 69) 85%);
+    background: linear-gradient(180deg,rgba(30,67,147,1) 25%, rgba(253,29,29,1) 54%, rgba(252,176,69,1) 82%);
+}
+#main{
+    display: grid;
+    grid-template-columns: 23% 54% 23%;
+}
+.content{
+    background: rgb(40, 54, 85);
 }
 h1 {
     font-family: 'Overpass', sans-serif;
@@ -51,13 +58,6 @@ nav a:hover{
     margin-right: auto;
     width: 500px;
 }
-.text-box{
-    width: 80%;
-    height: 100%;   
-    position: relative;
-    bottom: 500px;
-    left: 100px;
-}
 .playlist-title{
     padding-top: 2em;
     padding-bottom: 1em;
@@ -78,6 +78,29 @@ nav a:hover{
     font-size: 35px;
     border:solid gray; /* remove borders later */
 }
+
+.fixed-header{
+    position: fixed;
+    width: 100%;
+    left: 0;
+}
+.fixed-header{
+    top: 0;
+    background: #8cabe6;
+    height: 80px;
+}
+footer{
+    background: rgb(40, 54, 85);
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+/*
+.fixed-footer{
+    bottom: 0;
+}
+
 #circle{
     animation-name: ball;
     animation-duration: 6s;
@@ -109,17 +132,4 @@ nav a:hover{
         background-color: #eeaeca;
         bottom: 0px;
     }
-}
-.fixed-header, .fixed-footer{
-    position: fixed;
-    width: 100%;
-    left: 0;
-}
-.fixed-header{
-    top: 0;
-    background: #8cabe6;
-    height: 80px;
-}
-.fixed-footer{
-    bottom: 0;
 }
