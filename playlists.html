@@ -1,4 +1,24 @@
 <!DOCTYPE html>
+<script>
+    //https://www.w3schools.com/howto/howto_js_dropdown.asp
+    //https://stackoverflow.com/questions/42333757/multiple-dropdown-menus-using-same-js-code
+    function dropdownFunc(a){
+        a.parentNode.getElementsByClassName("dropdown-content")[0].classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.matches('.drop-button')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
 <html>
     <head>
         <title>wrow</title>
@@ -11,25 +31,79 @@
             <nav>
                 <a href="index.html" id="nav-link">Home</a>
                 <a href="#" id="nav-link">Generators</a>
-                <a href="#" id="nav-link">Character Creators</a>
+                <a href="charcreate.html" id="nav-link">Character Creators</a>
                 <a href="#main" id="nav-link">Playlists</a>
                 <a href="#" id="nav-link">Resources</a>
             </nav>
         </header>
-        <main id="main">
-            <div class="temp"></div>
+        <main>
+            <div><img src="photos/left.png" class="background-image" id="left" alt="A black pixelart drawing of a cityscape silhouette"></div>
             <div class="content">
-                <h2 class="playlist-title">Need music for a specific setting or mood? Look no further!</h2>
+                <h2 class="page-title">Need music for a specific setting or mood? Look no further!</h2>
                 <div class="sections">
-                    <div class="box">Fantasy</div>
-                    <div class="box">Pirates</div>
-                    <div class="box">Criminals</div>
-                    <div class="box">Modern Day</div>
-                    <div class="box">Futuristic</div>
-                    <div class="box">Ambience</div>
+                    <div class="playlist-box">
+                        <div class="dropdown">
+                            <button onclick="dropdownFunc(this)" class="drop-button">Fantasy</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="https://open.spotify.com/playlist/1JShdUTOmU54ozm3oZEFMw?si=0d39611b9cc24e24" target="_blank">Fantasy Adventure</a>
+                                <a href="#" target="_blank">Link 2</a>
+                                <a href="#" target="_blank">Link 3</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="playlist-box">
+                        <div class="dropdown">
+                            <button onclick="dropdownFunc(this)" class="drop-button">Modern Day</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="#" target="_blank">Link 1</a>
+                                <a href="#" target="_blank">Link 2</a>
+                                <a href="#" target="_blank">Link 3</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="playlist-box">
+                        <div class="dropdown">
+                            <button onclick="dropdownFunc(this)" class="drop-button">Futuristic</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="#" target="_blank">Link 1</a>
+                                <a href="#" target="_blank">Link 2</a>
+                                <a href="#" target="_blank">Link 3</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="playlist-box">
+                        <div class="dropdown">
+                            <button onclick="dropdownFunc(this)" class="drop-button">White Noise</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="https://rainycafe.com/" target="_blank">Rainy Cafe</a>
+                                <a href="https://mynoise.net/noiseMachines.php" target="_blank">myNoise</a>
+                                <a href="#" target="_blank">Link 3</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="playlist-box">
+                        <div class="dropdown">
+                            <button onclick="dropdownFunc(this)" class="drop-button">Pirates</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="https://open.spotify.com/playlist/2DsYfCPWDxZtFzHRj9mO4h?si=7cd1a4b041714801" target="_blank">Sea shanties for thots</a>
+                                <a href="https://open.spotify.com/playlist/7m0Nys1lwqUMlyIkmhLpm9?si=93180841fa0c401d" target="_blank">Assassin's Creed Black Flag sea shanties</a>
+                                <a href="#" target="_blank">Link 3</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="playlist-box">
+                        <div class="dropdown">
+                            <button onclick="dropdownFunc(this)" class="drop-button"></button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="#" target="_blank">Link 1</a>
+                                <a href="#" target="_blank">Link 2</a>
+                                <a href="#" target="_blank">Link 3</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="temp"></div>
+            <div><img src="photos/right.png" class="background-image" id="right" alt="A black pixelart drawing of a cityscape silhouette"></div>
         </main>
         <footer></footer>
     </body>
