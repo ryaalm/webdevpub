@@ -2,13 +2,6 @@ html{
     background: rgb(83,36,115);
     background: linear-gradient(180deg,rgba(30,67,147,1) 25%, rgba(253,29,29,1) 54%, rgba(252,176,69,1) 82%);
 }
-main{
-    display: grid;
-    grid-template-columns: 23% 54% 23%;
-}
-.content{
-    background: rgb(40, 54, 85);
-}
 h1 {
     font-family: 'Overpass', sans-serif;
     font-weight: 800;
@@ -19,21 +12,10 @@ h1 {
     margin-top: 10px;
     text-shadow: 4px 0 0 black, 4px 0 0 black, 4px 0 0 black, 4px 0 0 black ;
 }
-h2{
-    font-family: sans-serif;
-    font-size: 20px;
-    line-height: 25px;
-    text-align: center;
-    text-transform: capitalize;
-    color: white;
-}
 p{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     color: white;
-}
-body{
-    padding-top: 110px;
 }
 nav{
     background: #556da5;
@@ -66,17 +48,17 @@ nav a:hover{
     height: 80px;
     z-index: 1;
 }
-.modified-image{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 500px;
+body{
+    padding-top: 110px;
 }
-.background-image{
-    position: fixed;
-    width: 355px;
-    height: 336px;
-    bottom: 0;
+main{
+    display: grid;
+    grid-template-columns: 23% 54% 23%;
+}
+.content{
+    background: rgb(40, 54, 85);
+    border: 3px black;
+    border-style: none solid none;
 }
 #left{
     left: 0;
@@ -84,9 +66,33 @@ nav a:hover{
 #right{
     right: 0;
 }
+.background-image{
+    position: fixed;
+    width: 355px;
+    height: 336px;
+    bottom: 0;
+}
 .page-title{
-    padding-top: 2em;
-    padding-bottom: 1em;
+    padding: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+}
+.page-description{
+    text-align: left;
+    padding: 1em;
+    border-radius: 1em;
+    border: solid black;
+    margin: 1em;
+    background-color: #556da5;
+}
+.modified-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
 }
 .playlist-box{
     display: flex;
@@ -130,47 +136,55 @@ nav a:hover{
 }
 .show{display: block;}
 
+.charcreate-desc{
+    color: white;
+    text-align: center;
+    padding: 10px 30px;
+}
+.slideshow-container{
+    position: relative;
+    margin: 2em;
+    display: grid;
+    grid-template-rows: 400px auto;
+    grid-gap: 10px;
+    border: black solid;
+    background-color: #1e2944;
+}
+.slideshow-container div{
+    display: none;
+}
+.slideshow-img{
+    display: block;
+    max-width: 100%;
+    max-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+/* arrow buttons */
+.prev, .next{
+    position: absolute;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+    width: auto;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 4px;
+    margin-top: -60px;
+    top: 50%;
+}
+.next{
+    right: 0;
+}
+.prev:hover, .next:hover{
+    color: rgb(173, 170, 170);
+}
 footer{
     background: rgb(32, 44, 68);
     height: 10px;
     width: 100%;
     position: absolute;
     left: 0;
-}
-/*
-.fixed-footer{
-    bottom: 0;
-}
-
-#circle{
-    animation-name: ball;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-    position: relative;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin: 15px 15px;
-}
-@keyframes ball{
-    0%{
-        background-color: #eeaeca;
-        bottom: 0px;
-    }
-    25%{
-        background-color: #c78be2;
-        bottom: 10px;
-    }
-    50%{
-        background-color: #94bbe9;
-        bottom: 0px;
-    }
-    75%{
-        background-color: #c78be2;
-        bottom: 10px;
-    }
-    100%{
-        background-color: #eeaeca;
-        bottom: 0px;
-    }
+    right: 0;
 }

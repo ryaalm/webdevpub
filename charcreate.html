@@ -1,4 +1,30 @@
 <!DOCTYPE html>
+<script>
+    //https://www.w3schools.com/howto/howto_js_slideshow.asp
+    //https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_two
+    //https://www.sitepoint.com/community/t/having-trouble-with-multiple-slideshows-on-one-page/293076/3
+
+    let slideIndex = [1,1,1];
+    let slideId = ["slideshow1","slideshow2","slideshow3"]
+
+    //arrow controls
+    function changeSlides(n, slideshowNr){
+        showSlides(slideIndex[slideshowNr] += n, slideshowNr);
+    }
+
+    function showSlides(n, slideshowNr){
+        var i;
+        var x = document.getElementsByClassName(slideId[slideshowNr]);
+        if(n > x.length){slideIndex[slideshowNr] = 1}
+        if(n < 1){slideIndex[slideshowNr] = x.length};
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        };
+        x[slideIndex[slideshowNr]-1].style.display = "block";
+    }
+    
+    
+</script>
 <html>
 <head>
     <title>wrow</title>
@@ -18,11 +44,56 @@
     </header>
 
     <main>
-        <div><img src="photos/left.png" class="background-image" id="left" alt="A black pixelart drawing of a cityscape silhouette"></div>
+        <div><img src="images/left.png" class="background-image" id="left" alt="A black pixelart drawing of a cityscape silhouette"></div>
         <div class="content">
-            <h2 class="page-title">Want beetroot? fuckin beetroot? ingredience...</h2>
+            <h2 class="page-title">Character Creators</h2>
+            <p class="page-description">If you are having trouble describing a character or just 
+                plain old need some inspiration character creators can be a big help! Unfortunately, 
+                the death of Flash Player has caused a lot of these to stop working, 
+                but I have tried to find a few that still work.
+            </p>
+            <div class="slideshow-container">
+                <div class="slideshow1" style="display: block">
+                    <img src="images/meiker1.png" class="slideshow-img">
+                </div>
+                <div class="slideshow1">
+                    <img src="images/meiker2.png" class="slideshow-img">
+                </div>
+                <div class="slideshow1">
+                    <img src="images/meiker3.png" class="slideshow-img">
+                </div>
+                <p class="charcreate-desc"><span style="display: block;">Meiker.io has tons of different character creator/dress-up games created by users.
+                    Quality can vary wildly between games, but you're sure to find something that fits 
+                    what you're looking for, either through the sections at the top or the words creators
+                    can tag their work with.
+                </span></p>
+                <a class="prev" onclick="changeSlides(-1, 0)">&#10094;</a>
+                <a class="next" onclick="changeSlides(1, 0)">&#10095;</a>
+            </div>
+            <div class="slideshow-container">
+                <div class="slideshow2" style="display: block;">
+                    <img src="images/meiker1.png" class="slideshow-img">
+                </div>
+                <div class="slideshow2">
+                    <img src="https://www.w3schools.com/howto/img_band_ny.jpg" class="slideshow-img">
+                </div>
+                <p class="charcreate-desc"><span style="display: block;">Lorem Ipsum</span></p>
+                <a class="prev" onclick="changeSlides(-1, 1)">&#10094;</a>
+                <a class="next" onclick="changeSlides(1, 1)">&#10095;</a>
+            </div>
+            <div class="slideshow-container">
+                <div class="slideshow3" style="display: block;">
+                    <img src="images/meiker1.png" class="slideshow-img">
+                </div>
+                <div class="slideshow3">
+                    <img src="images/left.png" class="slideshow-img">
+                </div>
+                <p class="charcreate-desc"><span style="display: block;">Lorem Ipsum</span></p>
+                <a class="prev" onclick="changeSlides(-1, 2)">&#10094;</a>
+                <a class="next" onclick="changeSlides(1, 2)">&#10095;</a>
+            </div>
         </div>
-        <div><img src="photos/right.png" class="background-image" id="right" alt="A black pixelart drawing of a cityscape silhouette"></div>
+        <div><img src="images/right.png" class="background-image" id="right" alt="A black pixelart drawing of a cityscape silhouette"></div>
     </main>
    <footer></footer>
 </body>

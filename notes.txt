@@ -4,20 +4,22 @@ generators:
     https://www.fantasynamegenerators.com/
     https://www.character-generator.org.uk/ (kind of fun, lots of options, can get wonky results)
     https://thestoryshack.com/tools/writing-prompt-generator/ (the writing prompts are p good, char gen seems good too, has a title generator)
+    https://pungenerator.org/
 
 resources: writing help and tips (should i merge this with generators?)
     https://springhole.net/ 
     https://writingexercises.co.uk/ 
     https://www.behindthename.com/ 
+    https://nanowrimo.org/
+    http://www.writerswrite.co.za/123-ideas-for-character-flaws/ (http://www.writerswrite.co.za)
 
 character creators: the death of flash has really fucked me
-    https://meiker.io/ *
+    https://meiker.io/
     http://www.heromachine.com/heromachine-3-lab/ (http://www.heromachine.com/2021/01/13/how-to-use-heromachine-locally/)
     https://www.dolldivine.com/
     https://charactercreator.org/ (very detailed. hard to use for me)
     https://charat.me/en/genesis/create/ (https://charat.me/)
     https://picrew.me/
-
 
 playlists: 
     sea shanties for thots https://open.spotify.com/playlist/2DsYfCPWDxZtFzHRj9mO4h?si=7cd1a4b041714801
@@ -25,4 +27,7 @@ playlists:
     fantasy: https://open.spotify.com/playlist/1JShdUTOmU54ozm3oZEFMw?si=0d39611b9cc24e24
     white noise/ambient: https://rainycafe.com/ https://mynoise.net/noiseMachines.php (lots of options)
 
-rename "modern" playlist section? "criminals" just sound. juvenile.
+rename "modern" playlist section? "criminals" just sounds. juvenile.
+make slideshows for the char creators?
+make a kind of rating system so ppl can "like" things, best rated first type deal? 
+https://www.w3schools.com/howto/howto_js_navbar_shrink_scroll.asp
