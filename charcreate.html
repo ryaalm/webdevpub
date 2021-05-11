@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <script>
+    //https://www.w3schools.com/howto/howto_js_navbar_shrink_scroll.asp
+    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("navbar").style.padding = "10px 40px";
+            document.getElementById("navbar").style.height = "80px";
+            document.getElementById("logo").style.fontSize = "40px";
+        } else {
+            document.getElementById("navbar").style.padding = "20px 60px";
+            document.getElementById("logo").style.fontSize = "50px";
+            document.getElementById("navbar").style.height = "90px";
+        }
+    }
     //https://www.w3schools.com/howto/howto_js_slideshow.asp
     //https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_two
     //https://www.sitepoint.com/community/t/having-trouble-with-multiple-slideshows-on-one-page/293076/3
+    //Switch slideshow image when arrows are pressed
 
     let slideIndex = [1,1,1];
     let slideId = ["slideshow1","slideshow2","slideshow3"]
@@ -26,75 +42,73 @@
     
 </script>
 <html>
-<head>
-    <title>wrow</title>
-    <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="fixed-header">
-        <h1>The Writer's block</h1>
-        <nav>
-            <a href="index.html" id="nav-link">Home</a>
-            <a href="#" id="nav-link">Generators</a>
-            <a href="#main" id="nav-link">Character Creators</a>
-            <a href="playlists.html" id="nav-link">Playlists</a>
-            <a href="#" id="nav-link">Resources</a>
-        </nav>
-    </header>
+    <head>
+        <title>wrow</title>
+        <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header id="navbar">
+            <h1 id="logo">The Writer's block</h1>
+            <nav>
+                <a href="index.html" id="nav-link">Home</a>
+                <a href="#main" id="nav-link">Character Creators</a>
+                <a href="playlists.html" id="nav-link">Playlists</a>
+                <a href="resources.html" id="nav-link">Resources</a>
+            </nav>
+        </header>
 
-    <main>
-        <div><img src="images/left.png" class="background-image" id="left" alt="A black pixelart drawing of a cityscape silhouette"></div>
-        <div class="content">
-            <h2 class="page-title">Character Creators</h2>
-            <p class="page-description">If you are having trouble describing a character or just 
-                plain old need some inspiration character creators can be a big help! Unfortunately, 
-                the death of Flash Player has caused a lot of these to stop working, 
-                but I have tried to find a few that still work.
-            </p>
-            <div class="slideshow-container">
-                <div class="slideshow1" style="display: block">
-                    <img src="images/meiker1.png" class="slideshow-img">
+        <main>
+            <div><img src="images/left.png" class="background-image" id="left" alt="A black pixelart drawing of a cityscape silhouette"></div>
+            <div class="content">
+                <h2 class="page-title">Character Creators</h2>
+                <p class="page-description">If you are having trouble describing a character or just 
+                    plain old need some inspiration character creators can be a big help! Unfortunately, 
+                    the death of Flash Player has caused a lot of these to stop working, 
+                    but I have tried to find a few that still work.
+                </p>
+                <div class="slideshow-container">
+                    <div class="slideshow1" style="display: block">
+                        <img src="images/meiker1.png" class="slideshow-img">
+                    </div>
+                    <div class="slideshow1">
+                        <img src="images/meiker2.png" class="slideshow-img">
+                    </div>
+                    <div class="slideshow1">
+                        <img src="images/meiker3.png" class="slideshow-img">
+                    </div>
+                    <p class="charcreate-desc"><span style="display: block;"><a href="https://meiker.io/">Meiker.io</a> has tons of different character creator/dress-up games created by users.
+                        Quality can vary wildly between games, but you're sure to find something that fits 
+                        what you're looking for, either through the sections at the top or the different tags creators have tagged their work with.
+                    </span></p>
+                    <a class="prev" onclick="changeSlides(-1, 0)">&#10094;</a>
+                    <a class="next" onclick="changeSlides(1, 0)">&#10095;</a>
                 </div>
-                <div class="slideshow1">
-                    <img src="images/meiker2.png" class="slideshow-img">
+                <div class="slideshow-container">
+                    <div class="slideshow2" style="display: block;">
+                        <img src="images/meiker1.png" class="slideshow-img">
+                    </div>
+                    <div class="slideshow2">
+                        <img src="https://www.w3schools.com/howto/img_band_ny.jpg" class="slideshow-img">
+                    </div>
+                    <p class="charcreate-desc"><span style="display: block;">Lorem Ipsum</span></p>
+                    <a class="prev" onclick="changeSlides(-1, 1)">&#10094;</a>
+                    <a class="next" onclick="changeSlides(1, 1)">&#10095;</a>
                 </div>
-                <div class="slideshow1">
-                    <img src="images/meiker3.png" class="slideshow-img">
+                <div class="slideshow-container">
+                    <div class="slideshow3" style="display: block;">
+                        <img src="images/meiker1.png" class="slideshow-img">
+                    </div>
+                    <div class="slideshow3">
+                        <img src="images/left.png" class="slideshow-img">
+                    </div>
+                    <p class="charcreate-desc"><span style="display: block;">Lorem Ipsum</span></p>
+                    <a class="prev" onclick="changeSlides(-1, 2)">&#10094;</a>
+                    <a class="next" onclick="changeSlides(1, 2)">&#10095;</a>
                 </div>
-                <p class="charcreate-desc"><span style="display: block;">Meiker.io has tons of different character creator/dress-up games created by users.
-                    Quality can vary wildly between games, but you're sure to find something that fits 
-                    what you're looking for, either through the sections at the top or the words creators
-                    can tag their work with.
-                </span></p>
-                <a class="prev" onclick="changeSlides(-1, 0)">&#10094;</a>
-                <a class="next" onclick="changeSlides(1, 0)">&#10095;</a>
             </div>
-            <div class="slideshow-container">
-                <div class="slideshow2" style="display: block;">
-                    <img src="images/meiker1.png" class="slideshow-img">
-                </div>
-                <div class="slideshow2">
-                    <img src="https://www.w3schools.com/howto/img_band_ny.jpg" class="slideshow-img">
-                </div>
-                <p class="charcreate-desc"><span style="display: block;">Lorem Ipsum</span></p>
-                <a class="prev" onclick="changeSlides(-1, 1)">&#10094;</a>
-                <a class="next" onclick="changeSlides(1, 1)">&#10095;</a>
-            </div>
-            <div class="slideshow-container">
-                <div class="slideshow3" style="display: block;">
-                    <img src="images/meiker1.png" class="slideshow-img">
-                </div>
-                <div class="slideshow3">
-                    <img src="images/left.png" class="slideshow-img">
-                </div>
-                <p class="charcreate-desc"><span style="display: block;">Lorem Ipsum</span></p>
-                <a class="prev" onclick="changeSlides(-1, 2)">&#10094;</a>
-                <a class="next" onclick="changeSlides(1, 2)">&#10095;</a>
-            </div>
-        </div>
-        <div><img src="images/right.png" class="background-image" id="right" alt="A black pixelart drawing of a cityscape silhouette"></div>
-    </main>
-   <footer></footer>
-</body>
+            <div><img src="images/right.png" class="background-image" id="right" alt="A black pixelart drawing of a cityscape silhouette"></div>
+        </main>
+        <footer></footer>
+    </body>
 </html>

@@ -1,35 +1,51 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>wrow</title>
-    <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="fixed-header">
-        <h1>The Writer's block</h1>
-        <nav>
-            <a href="#main" id="nav-link">Home</a>
-            <a href="#" id="nav-link">Generators</a>
-            <a href="charcreate.html" id="nav-link">Character Creators</a>
-            <a href="playlists.html" id="nav-link">Playlists</a>
-            <a href="#" id="nav-link">Resources</a>
-        </nav>
-    </header>
+<script>
+    //https://www.w3schools.com/howto/howto_js_navbar_shrink_scroll.asp
+    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+    window.onscroll = function() {scrollFunction()};
 
-    <main>
-        <div><img src="images/left.png" class="background-image" id="left" alt="A black pixelart drawing of a cityscape silhouette"></div>
-        <div class="content">
-            <h2 class="page-title">save me</h2>
-            <img src="https://i.pinimg.com/originals/56/4f/72/564f7260c1c7c668290d42e87441429d.jpg"
-            alt="Image of a technical difficulties screen" class="modified-image">
-            <br>
-            <img src="https://i.kym-cdn.com/entries/icons/facebook/000/018/929/graphic_design_is_my_passion.jpg"
-            alt="Image with a badly photoshopped frog on a cloudy sky saying 'Graphic design is my passion'" 
-            class="modified-image">
-        </div>
-        <div><img src="images/right.png" class="background-image" id="right" alt="A black pixelart drawing of a cityscape silhouette"></div>
-    </main>
-   <footer></footer>
-</body>
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("navbar").style.padding = "10px 40px";
+            document.getElementById("navbar").style.height = "80px";
+            document.getElementById("logo").style.fontSize = "40px";
+        } else {
+            document.getElementById("navbar").style.padding = "20px 60px";
+            document.getElementById("logo").style.fontSize = "50px";
+            document.getElementById("navbar").style.height = "90px";
+        }
+    }
+</script>
+<html>
+    <head>
+        <title>wrow</title>
+        <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header id="navbar">
+            <h1 id="logo">The Writer's block</h1>
+            <nav>
+                <a href="#main" id="nav-link">Home</a>
+                <a href="charcreate.html" id="nav-link">Character Creators</a>
+                <a href="playlists.html" id="nav-link">Playlists</a>
+                <a href="resources.html" id="nav-link">Resources</a>
+            </nav>
+        </header>
+
+        <main>
+            <div><img src="images/left.png" class="background-image" id="left" alt="A black pixelart drawing of a cityscape silhouette"></div>
+            <div class="content">
+                <h2 class="page-title">save me</h2>
+                <img src="https://i.pinimg.com/originals/56/4f/72/564f7260c1c7c668290d42e87441429d.jpg"
+                alt="Image of a technical difficulties screen" class="modified-image">
+                <br>
+                <img src="https://i.kym-cdn.com/entries/icons/facebook/000/018/929/graphic_design_is_my_passion.jpg"
+                alt="Image with a badly photoshopped frog on a cloudy sky saying 'Graphic design is my passion'" 
+                class="modified-image">
+            </div>
+            <div><img src="images/right.png" class="background-image" id="right" alt="A black pixelart drawing of a cityscape silhouette"></div>
+        </main>
+        <footer></footer>
+    </body>
 </html>

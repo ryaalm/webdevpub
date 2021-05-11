@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<script>
+    //https://www.w3schools.com/howto/howto_js_navbar_shrink_scroll.asp
+    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("navbar").style.padding = "10px 40px";
+            document.getElementById("navbar").style.height = "80px";
+            document.getElementById("logo").style.fontSize = "40px";
+        } else {
+            document.getElementById("navbar").style.padding = "20px 60px";
+            document.getElementById("logo").style.fontSize = "50px";
+            document.getElementById("navbar").style.height = "90px";
+        }
+    }
+</script>
+<html>
+    <head>
+        <title>wrow</title>
+        <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header id="navbar">
+            <h1 id="logo">The Writer's block</h1>
+            <nav>
+                <a href="index.html" id="nav-link">Home</a>
+                <a href="charcreate.html" id="nav-link">Character Creators</a>
+                <a href="playlists.html" id="nav-link">Playlists</a>
+                <a href="#main" id="nav-link">Resources</a>
+            </nav>
+        </header>
+
+        <main>
+            <div><img src="images/left.png" class="background-image" id="left" alt="A black pixelart drawing of a cityscape silhouette"></div>
+            <div class="content">
+                <h2 class="page-title">Resources and Generators</h2>
+                <p class="page-description">A gathering of helpful generators and articles to improve your writing.</p>
+                <div class="res-content">
+                    <h3>Naming</h3>
+                    <div class="res-box">
+                        <a href="https://www.fantasynamegenerators.com/">FantasyNameGenerators.com</a>
+                        <p>
+                            This is the best site to use if you're having trouble naming just about anything. It has generators for
+                            anything you could possibly want from country specific names to dragon names and even names for a supercomputer. 
+                            As if that's not enough they have description generators too and creators so you can finally fullfill your dream of creating your own periodic table!
+                        </p>
+                    </div>
+                    <div class="res-box">
+                        <a href="https://www.behindthename.com/">BehindTheName.com</a>
+                        <p>
+                            On the other hand, if you would rather choose a name based on its meaning, this site is very useful.
+                            Like fantasynamegenerator you can search for names based on country or you can simply type the word you want
+                            the name to mean and voila! You can also narrow down the search by selecting if the name is masculine, feminine or unisex.
+                        </p>
+                    </div>
+                    <h3>Plot</h3>
+                    <div class="res-box">
+                        <a href="https://springhole.net/">Springhole.net</a>
+                        <p>
+                            is a website with "writing tips, roleplaying advice and more".
+                    It has a ton of articles on writing and worldbuilding, but also things like self-help, a few generators and even some art tutorials!
+                        </p>
+                    </div>
+                    <div class="res-box">
+                        <a href="#">plotgen</a>
+                        <p>
+                            plotgen
+                        </p>
+                    </div>
+                    <div class="res-box">
+                        <a href="#">storyshack</a>
+                        <p>
+                            writing prompt
+                        </p>
+                    </div>
+                    <h3>Characters</h3>
+                    <div class="res-box">
+                        <a href="#">charactergen</a>
+                        <p>
+                            chargen
+                        </p>
+                    </div>
+                    <div class="res-box">
+                        <a href="#">writerswrite</a>
+                        <p>
+                            char flaws
+                        </p>
+                    </div>
+                    <h3>Misc</h3>
+                    <div class="res-box">
+                        <a href="#">nanowrimo</a>
+                        <p>
+                            nano
+                        </p>
+                    </div>
+                    <div class="res-box">
+                        <a href="#">writing exercise</a>
+                        <p>
+                            writing ex
+                        </p>
+                    </div>
+                    <div class="res-box">
+                        <a href="#">pun gen</a>
+                        <p>
+                            pun generator
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div><img src="images/right.png" class="background-image" id="right" alt="A black pixelart drawing of a cityscape silhouette"></div>
+        </main>
+        <footer></footer>
+    </body>
+</html>

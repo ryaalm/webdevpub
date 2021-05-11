@@ -28,6 +28,4 @@ playlists:
     white noise/ambient: https://rainycafe.com/ https://mynoise.net/noiseMachines.php (lots of options)
 
 rename "modern" playlist section? "criminals" just sounds. juvenile.
-make slideshows for the char creators?
 make a kind of rating system so ppl can "like" things, best rated first type deal? 
-https://www.w3schools.com/howto/howto_js_navbar_shrink_scroll.asp
