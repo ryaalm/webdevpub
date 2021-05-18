@@ -26,6 +26,3 @@ playlists:
     the fake ah crew playlist? https://open.spotify.com/playlist/5UL0CV0Gbl8wOyxaYs8PlQ?si=583b79c54bbe478d
     fantasy: https://open.spotify.com/playlist/1JShdUTOmU54ozm3oZEFMw?si=0d39611b9cc24e24
     white noise/ambient: https://rainycafe.com/ https://mynoise.net/noiseMachines.php (lots of options)
-
-rename "modern" playlist section? "criminals" just sounds. juvenile.
-make a kind of rating system so ppl can "like" things, best rated first type deal? 

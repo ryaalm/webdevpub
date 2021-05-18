@@ -56,7 +56,7 @@ nav{
     border-top: 5px solid #4d699c;
     box-shadow: 0 5px 5px black;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     grid-gap: 50px;
     position: fixed;
     left: 0;
@@ -96,8 +96,8 @@ main{
 }
 .background-image{
     position: fixed;
-    width: 355px;
-    height: 336px;
+    max-width: 100%;
+    height: auto;
     bottom: 0;
     -webkit-user-drag: none;
     -moz-user-drag: none;
@@ -125,6 +125,23 @@ main{
     margin-left: auto;
     margin-right: auto;
     width: 500px;
+}
+.top-arrow{
+    position: fixed;
+    border-radius: 0 3px 3px 0;
+    width: auto;
+    color: white;
+    background-color: rgb(52, 70, 110);
+    font-size: 50px;
+    font-weight: bold;
+    padding: 5px;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+}
+.top-arrow:hover{
+    color: rgb(206, 203, 203);
+    background-color: rgb(40, 54, 85);
 }
 /*****Playlist*****/
 .playlist-box{
@@ -215,6 +232,7 @@ main{
     margin-left: auto;
     margin-right: auto;
     padding-top: 20px;
+    height: auto;
 }
 /* arrow buttons */
 .prev, .next{
@@ -258,6 +276,45 @@ main{
     color: rgb(206, 203, 203);
     background-color: rgb(75, 103, 163);
 }
+/*****Requests*****/
+.request-box{
+    background-color: #1e2944;
+    border: black solid;
+    margin: 2em;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: white;
+    padding: 1em;
+}
+.input{
+    margin: 1em;
+}
+#request{
+    padding: 2em;
+}
+#subm-button{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.req-container{
+    background-color:#1e2944;
+    border: black solid;
+    margin: 1em;
+}
+.req-name{
+    text-align: left;
+    margin-left: 30px;
+    font-size: 20px;
+    color: white;
+    font-family: 'Overpass', sans-serif;
+}
+.request{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 /*****Footer*****/
 footer{
     background: rgb(32, 44, 68);
@@ -267,3 +324,4 @@ footer{
     left: 0;
     right: 0;
 }
+/*****Media Queries*****/
