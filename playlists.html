@@ -1,67 +1,33 @@
 <!DOCTYPE html>
-<script>
-    //https://www.w3schools.com/howto/howto_js_navbar_shrink_scroll.asp
-    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-            document.getElementById("navbar").style.padding = "10px 40px";
-            document.getElementById("navbar").style.height = "80px";
-            document.getElementById("logo").style.fontSize = "40px";
-        } else {
-            document.getElementById("navbar").style.padding = "20px 60px";
-            document.getElementById("logo").style.fontSize = "50px";
-            document.getElementById("navbar").style.height = "90px";
-        }
-    }
-    //https://www.w3schools.com/howto/howto_js_dropdown.asp
-    //https://stackoverflow.com/questions/42333757/multiple-dropdown-menus-using-same-js-code
-    //When the user clicks on the button, a dropdown menu appears
-    function dropdownFunc(a){
-        a.parentNode.getElementsByClassName("dropdown-content")[0].classList.toggle("show");
-    }
-
-    window.onclick = function(event) {
-        if (!event.target.matches('.drop-button')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
-        }
-    }
-</script>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>wrow</title>
         <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="javascript/navScroll.js"></script>
+        <script type="text/javascript" src="javascript/dropdown.js"></script>
     </head>
     <body>
         <a name="top"></a>
         <header id="navbar">
             <h1 id="logo">The Writer's block</h1>
             <nav>
-                <a href="index.html" id="nav-link">Home</a>
-                <a href="charcreate.html" id="nav-link">Character Creators</a>
-                <a href="#top" id="nav-link">Playlists</a>
-                <a href="resources.html" id="nav-link">Resources</a>
-                <a href="requests.html" id="nav-link">Requests</a>
+                <a href="index.html" id="home">Home</a>
+                <a href="charcreate.html" id="charcreate">Character Creators</a>
+                <a href="#top" id="playlists">Playlists</a>
+                <a href="resources.html" id="resources">Resources</a>
             </nav>
         </header>
         <main>
-            <div><img src="images/left.png" class="background-image" id="left" alt="A black pixelart drawing of a cityscape silhouette"></div>
+            <div><img src="images/left.png" class="background-image no-select-drag" id="left" alt=""></div>
             <div class="content">
                 <h2 class="page-title">Playlists</h2>
                 <p class="page-description">Need music for a specific setting or mood? Look no further!</p>
                 <div class="sections">
                     <div class="playlist-box">
                         <div class="dropdown">
-                            <button onclick="dropdownFunc(this)" class="drop-button">Fantasy</button>
+                            <button onclick="dropdownFunc(this)" class="drop-button" alt="Fantasy">Fantasy</button>
                             <div id="myDropdown" class="dropdown-content">
                                 <a href="https://open.spotify.com/playlist/1JShdUTOmU54ozm3oZEFMw?si=0d39611b9cc24e24" target="_blank">Fantasy Adventure</a>
                                 <a href="#" target="_blank">Link 2</a>
@@ -71,7 +37,7 @@
                     </div>
                     <div class="playlist-box">
                         <div class="dropdown">
-                            <button onclick="dropdownFunc(this)" class="drop-button">Urban</button>
+                            <button onclick="dropdownFunc(this)" class="drop-button" alt="Urban">Urban</button>
                             <div id="myDropdown" class="dropdown-content">
                                 <a href="#" target="_blank">Link 1</a>
                                 <a href="#" target="_blank">Link 2</a>
@@ -81,7 +47,7 @@
                     </div>
                     <div class="playlist-box">
                         <div class="dropdown">
-                            <button onclick="dropdownFunc(this)" class="drop-button">Futuristic</button>
+                            <button onclick="dropdownFunc(this)" class="drop-button" alt="Futuristic">Futuristic</button>
                             <div id="myDropdown" class="dropdown-content">
                                 <a href="#" target="_blank">Link 1</a>
                                 <a href="#" target="_blank">Link 2</a>
@@ -91,7 +57,7 @@
                     </div>
                     <div class="playlist-box">
                         <div class="dropdown">
-                            <button onclick="dropdownFunc(this)" class="drop-button">White Noise</button>
+                            <button onclick="dropdownFunc(this)" class="drop-button" alt="White noise">White Noise</button>
                             <div id="myDropdown" class="dropdown-content">
                                 <a href="https://rainycafe.com/" target="_blank">Rainy Cafe</a>
                                 <a href="https://mynoise.net/noiseMachines.php" target="_blank">myNoise</a>
@@ -101,7 +67,7 @@
                     </div>
                     <div class="playlist-box">
                         <div class="dropdown">
-                            <button onclick="dropdownFunc(this)" class="drop-button">Pirates</button>
+                            <button onclick="dropdownFunc(this)" class="drop-button" alt="Pirates">Pirates</button>
                             <div id="myDropdown" class="dropdown-content">
                                 <a href="https://open.spotify.com/playlist/2DsYfCPWDxZtFzHRj9mO4h?si=7cd1a4b041714801" target="_blank">Sea shanties for thots</a>
                                 <a href="https://open.spotify.com/playlist/7m0Nys1lwqUMlyIkmhLpm9?si=93180841fa0c401d" target="_blank">Assassin's Creed Black Flag sea shanties</a>
@@ -111,7 +77,7 @@
                     </div>
                     <div class="playlist-box">
                         <div class="dropdown">
-                            <button onclick="dropdownFunc(this)" class="drop-button">Classical</button>
+                            <button onclick="dropdownFunc(this)" class="drop-button" alt="Classical">Classical</button>
                             <div id="myDropdown" class="dropdown-content">
                                 <a href="#" target="_blank">Link 1</a>
                                 <a href="#" target="_blank">Link 2</a>
@@ -122,7 +88,7 @@
                 </div>
             </div>
             <div>
-                <img src="images/right.png" class="background-image" id="right" alt="A black pixelart drawing of a cityscape silhouette">
+                <img src="images/right.png" class="background-image no-select-drag" id="right" alt="">
                 <a href="#top" class="top-arrow">&#10514;</a>
             </div>
         </main>

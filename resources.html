@@ -1,42 +1,26 @@
 <!DOCTYPE html>
-<script>
-    //https://www.w3schools.com/howto/howto_js_navbar_shrink_scroll.asp
-    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-            document.getElementById("navbar").style.padding = "10px 40px";
-            document.getElementById("navbar").style.height = "80px";
-            document.getElementById("logo").style.fontSize = "40px";
-        } else {
-            document.getElementById("navbar").style.padding = "20px 60px";
-            document.getElementById("logo").style.fontSize = "50px";
-            document.getElementById("navbar").style.height = "90px";
-        }
-    }
-</script>
 <html>
     <head>
-        <title>wrow</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>The Writer's Block</title>
         <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="javascript/navScroll.js"></script>
     </head>
     <body>
         <a name="top"></a>
         <header id="navbar">
             <h1 id="logo">The Writer's block</h1>
             <nav>
-                <a href="index.html" id="nav-link">Home</a>
-                <a href="charcreate.html" id="nav-link">Character Creators</a>
-                <a href="playlists.html" id="nav-link">Playlists</a>
-                <a href="#top" id="nav-link">Resources</a>
-                <a href="requests.html" id="nav-link">Requests</a>
+                <a href="index.html" id="home">Home</a>
+                <a href="charcreate.html" id="charcreate">Character Creators</a>
+                <a href="playlists.html" id="playlists">Playlists</a>
+                <a href="#top" id="resources">Resources</a>
             </nav>
         </header>
 
         <main>
-            <div><img src="images/left.png" class="background-image" id="left" alt="A black pixelart drawing of a cityscape silhouette"></div>
+            <div><img src="images/left.png" class="background-image no-select-drag" id="left"  alt=""></div>
             <div class="content">
                 <h2 class="page-title">Resources and Generators</h2>
                 <p class="page-description">A gathering of helpful generators and articles to improve your writing.</p>
@@ -113,7 +97,7 @@
                 </div>
             </div>
             <div>
-                <img src="images/right.png" class="background-image" id="right" alt="A black pixelart drawing of a cityscape silhouette">
+                <img src="images/right.png" class="background-image no-select-drag" id="right" alt="">
                 <a href="#top" class="top-arrow">&#10514;</a>
             </div>
         </main>
